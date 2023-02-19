@@ -23,7 +23,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(/back.jpg);
+    background-image: url(back.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
