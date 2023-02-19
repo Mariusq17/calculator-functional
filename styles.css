@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --size: 400px;
+    --vertical-size: calc(1.5 * var(--size));
+    --button-size: 65px;
+    --radius: 16px;
+    --red: tomato;
+    --orange: rgb(255, 193, 68);
+    --green: rgb(82, 214, 0);
+    --light-grey: #d1d1d1;
+    --medium-grey: #787878;
+    --dark-grey: #121212;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/back.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.calculator-container {
+    width: var(--size);
+    height: var(--vertical-size);
+    background-color: var(--medium-grey);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    /* box-shadow: 0px 0px 250px var(--dark-grey);
+    border: 1px solid var(--dark-grey); */
+}
+.display {
+    height: calc(.3 * var(--vertical-size));
+    width: 100%;
+    background-color: var(--dark-grey);
+    padding: 60px 40px;
+    color: var(--light-grey);
+    text-align: end;
+    font-size: 1.5rem;
+}
+.buttons-container {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+    column-gap: 30px;
+}
+.button {
+    --radius: 4px;
+    width: var(--button-size);
+    height: var(--button-size);
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: box-shadow 200ms;
+}
+.button:hover {
+    box-shadow: 0px 0px 10px var(--dark-grey);
+}
+.button.signs {
+    background-color: var(--orange);
+}
+.button.number, .button#functionalDot {
+    background-color: var(--light-grey);
+}
+.button#functionalEqual {
+    background-color: var(--green);
+}
+.button#clearBtn, .button#clearAllBtn {
+    background-color: var(--red);
+}
